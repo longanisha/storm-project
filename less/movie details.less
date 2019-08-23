@@ -1,0 +1,48 @@
+.movie_details() {
+  .special {
+    .special();
+    z-index: 2;
+  }
+
+  span:nth-child(2) {
+    .blur();
+    z-index: 2;
+  }
+  .blur() {
+    position: absolute;
+    left: 170px;
+    bottom: 59px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+  }
+  .special() {
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    display: inline-block;
+    width: 75px;
+    height: 18px;
+    background: url("../img/vip-tips.png") -110px 0 no-repeat;
+  }
+  .movie_text {
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    div {
+      p:nth-child(1) {
+        font-size: 14px;
+      }
+      p:nth-child(2) {
+        color: gray;
+      }
+    }
+    .ranking_point {
+      .ranking_point();
+    }
+    .ranking_point() {
+      color: orange;
+      font-size: 20px;
+    }
+  }
+}

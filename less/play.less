@@ -1,0 +1,542 @@
+@a: 0.8px;
+#head {
+  height: 55px;
+  background-color: #242428;
+  color: #989898;
+  .headContainer {
+    display: flex;
+    height: 55px;
+    width: 1180px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    .headNav {
+      display: flex;
+      width: 280px;
+
+      justify-content: space-between;
+      align-items: center;
+      .logo {
+        width: 175px;
+        height: 38px;
+        background: url("../img/indexicons.png") 0 -566px no-repeat;
+      }
+      a {
+        color: #989898;
+      }
+      .nav {
+        vertical-align: middle;
+        width: 60px;
+        i {
+          font-style: normal;
+        }
+        .show {
+          position: absolute;
+          top: -155px;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+          width: 1180px;
+          height: 50px;
+          background-color: #383a42;
+          display: flex;
+          visibility: hidden;
+          color: #fff;
+
+          .option {
+            width: 40%;
+            height: 100%;
+            border-right: 1px solid #989898;
+
+            ul {
+              height: 100%;
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: space-between;
+              li {
+                float: left;
+                width: 20%;
+                text-align: center;
+              }
+            }
+          }
+        }
+        .middleNav {
+          width: 20%;
+          height: 100%;
+          border-right: 1px solid #989898;
+          ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            li {
+              float: left;
+              text-align: center;
+              width: 50%;
+            }
+          }
+        }
+        .rightNav {
+          width: 40%;
+          height: 100%;
+          ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            li {
+              text-align: center;
+              float: left;
+              width: 30%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              .logoNav {
+                // display: block;
+                width: 28px;
+                height: 28px;
+                background: url("../img/indexicons.png") -241px -161px no-repeat;
+              }
+            }
+          }
+        }
+        &:hover {
+          cursor: pointer;
+        }
+        &:hover .show{
+            visibility: visible;
+          }
+        &:hover > i {
+          color: #009cff;
+        }
+        &:hover > span {
+          background: url("../img/indexicons.png") -386px -590px no-repeat;
+        }
+        > span {
+          display: inline-block;
+          width: 14px;
+          height: 14px;
+          background: url("../img/indexicons.png") -386px -563px no-repeat;
+          vertical-align: middle;
+          margin-left: 6px;
+        }
+      }
+    }
+    div:nth-child(2) {
+      display: flex;
+      align-items: center;
+      width: 562 * @a;
+      height: 30 * @a;
+      border-radius: 3px;
+      overflow: hidden;
+      input {
+        width: 475 * @a;
+        height: 100%;
+      }
+      .searchbtn {
+        width: 88px;
+        height: 100%;
+
+        background-color: #009cff;
+      }
+    }
+    .headRight {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .smallLogos {
+        width: 237 * @a;
+        display: flex;
+        justify-content: space-between;
+        div {
+          width: 20px;
+          height: 20px;
+        }
+        div:nth-child(1) {
+          background: url("../img/indexicons.png") 0 -159px no-repeat;
+        }
+        div:nth-child(2) {
+          background: url("../img/indexicons.png") 0 -200px no-repeat;
+        }
+        div:nth-child(3) {
+          background: url("../img/indexicons.png") 0 -234px no-repeat;
+        }
+        div:nth-child(4) {
+          background: url("../img/indexicons.png") -110px -234px no-repeat;
+        }
+      }
+      .logoDescrition {
+        width: 237 * @a;
+
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+#playArea {
+  background-color: #383a42;
+
+  .playContent {
+    width: 1180px;
+    margin: 0 auto;
+    height: 750 * @a;
+    .videoNav {
+      height: 56 * @a;
+      color: #989898;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      p {
+        color: #fff;
+      }
+      a {
+        color: #989898;
+      }
+    }
+    .videoMain {
+      height: 630 * @a;
+      display: flex;
+      .videoBody {
+        width: 1060 * @a;
+        background-color: #959595;
+      }
+      .playList {
+        height: 630 * @a;
+        width: 332px;
+        background-color: #242428;
+        .listHead {
+          width: 100%;
+          height: 49 * @a;
+          line-height: 49 * @a;
+          text-align: center;
+          display: flex;
+          align-items: stretch;
+          color: #fff;
+          div {
+            width: 50%;
+          }
+          .active {
+            color: #009cff;
+            border-bottom: 1px solid #009cff;
+          }
+        }
+        .listBody {
+          overflow: hidden;
+          height: 466px;
+          display: flex;
+          justify-content: center;
+          ul {
+            overflow-y: auto;
+            width: 90%;
+            &::-webkit-scrollbar {
+              width: 14px;
+              height: 4px;
+            }
+            &::-webkit-scrollbar-thumb {
+              border-radius: 10px;
+              height: 4px;
+              background: #2b2c31;
+            }
+            &::-webkit-scrollbar-track {
+              border-radius: 10px;
+              background: #6a6b6e;
+            }
+
+            li {
+              width: 100%;
+              height: 48 * @a;
+              border-bottom: 1px solid #6a6b6e;
+              color: #6a6b6e;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              span:nth-child(2) {
+                width: 15px;
+                height: 12px;
+                background: url("../img/indexicons.png") 0 -130px no-repeat;
+                float: right;
+              }
+            }
+          }
+        }
+      }
+    }
+    .videoBottom {
+      width: 100%;
+      height: 40px;
+      // background-color: green;
+
+      .left {
+        float: left;
+
+        width: 848px;
+        height: 40px;
+        color: #989898;
+        background-color: #242428;
+        vertical-align: top;
+        div {
+          display: inline-block;
+          line-height: 40px;
+
+          span {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background: url("../img/playicons.png") 0 0 no-repeat;
+            margin-right: 6px;
+          }
+          span:nth-child(2) {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background: url("../img/playicons.png") 0 -35px no-repeat;
+          }
+          span:nth-child(3) {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background: url("../img/playicons.png") 0 -72px no-repeat;
+          }
+        }
+        div:nth-child(2) {
+          float: right;
+          span {
+            margin-right: 10px;
+          }
+        }
+      }
+      .download {
+        float: right;
+        width: 332px;
+        height: 100%;
+        line-height: 40px;
+        text-align: center;
+        color: #fff;
+        background-color: #398ee6;
+        cursor: pointer;
+        position: relative;
+        top: 0px;
+      }
+    }
+  }
+}
+#movies {
+  //   background-color: #242428;
+  display: flex;
+  width: 1180px;
+  margin: 0 auto;
+  height: 1681 * @a;
+  .moviesLeft {
+    width: 100%;
+    height: 100%;
+    // background-color: green;
+    .likes {
+      margin-top: 173 * @a;
+      margin-bottom: 188 * @a;
+      .movieClasify {
+        font-size: 26 * @a;
+        font-style: bold;
+        border-left: 4px solid #009cff;
+        padding-left: 11px;
+      }
+      ul {
+        margin-top: 18 * @a;
+        li {
+          width: 180px;
+          @import url("../less/movie details.less");
+
+          .movie_details {
+            .movie_details();
+          }
+        }
+      }
+    }
+    .hot {
+      display: flex;
+      justify-content: space-between;
+      .hotLeft {
+        display: inline-block;
+        .movieClasify {
+          font-size: 26 * @a;
+          font-style: bold;
+          border-left: 4px solid #009cff;
+          padding-left: 11px;
+          margin-bottom: 20px;
+          .more {
+            font-size: 12px;
+            margin-left: 40px;
+          }
+        }
+        ul {
+          li {
+            // width: 180px;
+            .movie_details {
+              position: relative;
+              .movieName {
+                //   display: block;
+                position: absolute;
+                bottom: 11px;
+                left: 8px;
+                color: #fff;
+                z-index: 2;
+              }
+            }
+          }
+        }
+      }
+      .hotRanking {
+        //   float: right;
+        //   display: inline-block;
+        height: 100%;
+        //   background-color: gray;
+        .movieClasify {
+          font-size: 26 * @a;
+          font-style: bold;
+          border-left: 4px solid #009cff;
+          padding-left: 11px;
+          margin-bottom: 20px;
+          .more {
+            font-size: 12px;
+            margin-left: 40px;
+          }
+        }
+        ul {
+          width: 100%;
+          li {
+            p {
+              span:nth-child(3) {
+                float: right;
+                color: red;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .comments {
+    width: 489 * @a;
+    height: 1681 * @a;
+
+    .commentArea {
+      overflow: hidden;
+      margin-top: 138.4px;
+      .movieClasify {
+        font-size: 26 * @a;
+        font-style: bold;
+        border-left: 4px solid #009cff;
+        padding-left: 11px;
+        margin-bottom: 20px;
+        .more {
+          font-size: 12px;
+          margin-left: 40px;
+        }
+        .total {
+          font-size: 12px;
+        }
+        .num {
+          color: #009cff;
+        }
+      }
+      > p {
+        height: 30px;
+        position: relative;
+        margin-top: 6px;
+
+        span {
+          width: 82px;
+          height: 30px;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          background-color: #1a9eff;
+          color: #fff;
+          font-size: 14px;
+          line-height: 30px;
+          text-align: center;
+        }
+      }
+      .cell {
+        float: right;
+        color: #c29191;
+        margin-top: 6px;
+      }
+    }
+    .commentList {
+      > div {
+        display: flex;
+        border-bottom: 1px solid #e8e8e8;
+        > div {
+          width: 79px;
+          height: 32px;
+          text-align: center;
+          line-height: 32px;
+
+          &.active {
+            border-bottom: 1px solid #1a9eff;
+            padding-bottom: 1px;
+            margin-bottom: -1px;
+          }
+        }
+      }
+      ul {
+        li {
+          height: 130px;
+          border-bottom: 1px solid #b6b6b6;
+          > div {
+            display: flex;
+            margin-top: 15px;
+            span {
+              display: inline-block;
+              width: 34px;
+              height: 28px;
+              border-radius: 50%;
+              background-color: lightgreen;
+            }
+            > div {
+              p:nth-child(2) {
+                color: #b198b1;
+              }
+            }
+          }
+          .massage {
+            margin-top: 26px;
+          }
+          .likesCount {
+            float: right;
+            margin-top: 12px;
+            span:nth-child(1) {
+              display: inline-block;
+              width: 15px;
+              height: 15px;
+              background: url("../img/playicons.png") 0 0 no-repeat;
+              margin-right: 9px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.footer {
+  width: 1180px;
+  margin: 0 auto;
+  text-align: center;
+  color: #989898;
+  border-top: 1px solid #1a9eff;
+  p {
+    margin-top: 16px;
+    a {
+      color: #989898;
+    }
+  }
+}
