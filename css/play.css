@@ -28,14 +28,15 @@
 #head .headContainer .headNav .nav {
   vertical-align: middle;
   width: 60px;
+  position: relative;
 }
 #head .headContainer .headNav .nav i {
   font-style: normal;
 }
 #head .headContainer .headNav .nav .show {
   position: absolute;
-  top: -155px;
-  left: 0;
+  top: 103px;
+  left: -221px;
   right: 0;
   bottom: 0;
   margin: auto;
