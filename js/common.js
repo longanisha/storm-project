@@ -91,6 +91,7 @@ function ajax(method,url,data,cb){
             url = url+"?"+data;
         }
         xhr.open("GET",url);
+        xhr.responseType = "json";
         xhr.send();
     }else if(method=="POST"){
         xhr.open("POST",url);
@@ -103,8 +104,9 @@ function ajax(method,url,data,cb){
     }
     xhr.onreadystatechange = function(){
         if(xhr.readyState==4&&xhr.status==200){
-            // console.log(xhr.responseText);
-            cb(xhr.responseText);
+            console.log(xhr.response);
+
+            cb(xhr.response);
         }
     }
 }

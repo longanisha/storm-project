@@ -163,7 +163,7 @@ body{
     
 }
 
-#recomanded{
+#recomanded, #hot_film{
     @import "../less/film_list_head.less";
     .films_title{
         .privilege_title{
@@ -228,20 +228,12 @@ body{
 }
 #hot_film{
 
-    .films_title{
-        .privilege_title{
-            background: url("../img/vip-logo.png")  0 -49px no-repeat;
-
-        }
-    }
     ul{
-      
+      display: block;
         li{
-           
-            &:nth-child(2){
-                margin: 0;
-            }
+         margin-right: 20px;   
         }
+       
     }
 }
 

@@ -196,8 +196,11 @@ body {
   margin: 0 auto;
 }
 #recomanded #recomanded .films_title,
+#hot_film #recomanded .films_title,
 #recomanded #hot_film .films_title,
-#recomanded #vip .films_title {
+#hot_film #hot_film .films_title,
+#recomanded #vip .films_title,
+#hot_film #vip .films_title {
   width: 1100px;
   height: 67px;
   background-color: #f3f3f3;
@@ -205,63 +208,91 @@ body {
   margin: 0 auto;
 }
 #recomanded #recomanded .films_title .privilege_title,
+#hot_film #recomanded .films_title .privilege_title,
 #recomanded #hot_film .films_title .privilege_title,
-#recomanded #vip .films_title .privilege_title {
+#hot_film #hot_film .films_title .privilege_title,
+#recomanded #vip .films_title .privilege_title,
+#hot_film #vip .films_title .privilege_title {
   display: inline-block;
   width: 100px;
   height: 24px;
   background: url("../img/vip-logo.png") 0 0 no-repeat;
 }
 #recomanded #recomanded .films_title a,
+#hot_film #recomanded .films_title a,
 #recomanded #hot_film .films_title a,
-#recomanded #vip .films_title a {
+#hot_film #hot_film .films_title a,
+#recomanded #vip .films_title a,
+#hot_film #vip .films_title a {
   float: right;
   color: #333;
 }
 #recomanded #recomanded .films_title img,
+#hot_film #recomanded .films_title img,
 #recomanded #hot_film .films_title img,
-#recomanded #vip .films_title img {
+#hot_film #hot_film .films_title img,
+#recomanded #vip .films_title img,
+#hot_film #vip .films_title img {
   width: 10px;
   height: 10px;
   margin-left: 8px;
 }
 #recomanded #recomanded ul,
+#hot_film #recomanded ul,
 #recomanded #hot_film ul,
-#recomanded #vip ul {
+#hot_film #hot_film ul,
+#recomanded #vip ul,
+#hot_film #vip ul {
   width: 1100px;
   margin: 0 auto;
   overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 #recomanded #recomanded ul li,
+#hot_film #recomanded ul li,
 #recomanded #hot_film ul li,
-#recomanded #vip ul li {
+#hot_film #hot_film ul li,
+#recomanded #vip ul li,
+#hot_film #vip ul li {
   float: left;
-  margin: 0 18px 0 0;
   position: relative;
 }
 #recomanded #recomanded ul li:nth-child(5),
+#hot_film #recomanded ul li:nth-child(5),
 #recomanded #hot_film ul li:nth-child(5),
-#recomanded #vip ul li:nth-child(5) {
+#hot_film #hot_film ul li:nth-child(5),
+#recomanded #vip ul li:nth-child(5),
+#hot_film #vip ul li:nth-child(5) {
   margin: 0;
 }
 #recomanded #recomanded ul li div:nth-child(1),
+#hot_film #recomanded ul li div:nth-child(1),
 #recomanded #hot_film ul li div:nth-child(1),
-#recomanded #vip ul li div:nth-child(1) {
+#hot_film #hot_film ul li div:nth-child(1),
+#recomanded #vip ul li div:nth-child(1),
+#hot_film #vip ul li div:nth-child(1) {
   width: 205px;
 }
 #recomanded #recomanded ul li div:nth-child(1) img,
+#hot_film #recomanded ul li div:nth-child(1) img,
 #recomanded #hot_film ul li div:nth-child(1) img,
-#recomanded #vip ul li div:nth-child(1) img {
+#hot_film #hot_film ul li div:nth-child(1) img,
+#recomanded #vip ul li div:nth-child(1) img,
+#hot_film #vip ul li div:nth-child(1) img {
   position: relative;
   left: 0;
   top: 0;
   width: 205px;
   z-index: 1;
 }
-#recomanded .films_title .privilege_title {
+#recomanded .films_title .privilege_title,
+#hot_film .films_title .privilege_title {
   background: url("../img/vip-logo.png") 0 -24px no-repeat;
 }
-#recomanded ul li .movie_details .special {
+#recomanded ul li .movie_details .special,
+#hot_film ul li .movie_details .special {
   position: absolute;
   top: 7px;
   left: 10px;
@@ -271,7 +302,8 @@ body {
   background: url("../img/vip-tips.png") -110px 0 no-repeat;
   z-index: 2;
 }
-#recomanded ul li .movie_details span:nth-child(2) {
+#recomanded ul li .movie_details span:nth-child(2),
+#hot_film ul li .movie_details span:nth-child(2) {
   position: absolute;
   left: 170px;
   bottom: 59px;
@@ -279,29 +311,34 @@ body {
   color: #fff;
   z-index: 2;
 }
-#recomanded ul li .movie_details .movie_text {
+#recomanded ul li .movie_details .movie_text,
+#hot_film ul li .movie_details .movie_text {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-#recomanded ul li .movie_details .movie_text div p:nth-child(1) {
+#recomanded ul li .movie_details .movie_text div p:nth-child(1),
+#hot_film ul li .movie_details .movie_text div p:nth-child(1) {
   font-size: 14px;
 }
-#recomanded ul li .movie_details .movie_text div p:nth-child(2) {
+#recomanded ul li .movie_details .movie_text div p:nth-child(2),
+#hot_film ul li .movie_details .movie_text div p:nth-child(2) {
   color: gray;
 }
-#recomanded ul li .movie_details .movie_text .ranking_point {
+#recomanded ul li .movie_details .movie_text .ranking_point,
+#hot_film ul li .movie_details .movie_text .ranking_point {
   color: orange;
   font-size: 20px;
 }
-#recomanded ul li:nth-child(5) {
+#recomanded ul li:nth-child(5),
+#hot_film ul li:nth-child(5) {
   margin: 0;
 }
-#hot_film .films_title .privilege_title {
-  background: url("../img/vip-logo.png") 0 -49px no-repeat;
+#hot_film ul {
+  display: block;
 }
-#hot_film ul li:nth-child(2) {
-  margin: 0;
+#hot_film ul li {
+  margin-right: 20px;
 }
 #help {
   width: 1100px;
