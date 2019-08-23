@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <script src="js/lib/jq.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/film_list.js"></script>
+
     <title>点播片库</title>
 </head>
 
@@ -35,43 +37,27 @@
         <div class="user_bar">
             <ul>
                 <li><a href=""></a> 首页</li>
-                <li><a href=""></a> 点播片库</li>
+                <li class="active"><a href=""></a> 点播片库</li>
                 <li><a href=""></a> 激活码兑换</li>
             </ul>
         </div>
     </div>
     <div id="main">
         <ul class="filmType">
-            <li>全部</li>
+            <li class="active">全部</li>
             <li>VIP会员免费</li>
             <li>VIP折扣点播</li>
         </ul>
         <div class="ranking">
-            <div class="recent">最新更新</div>
+            <div class="active">最新更新</div>
             <div class="popular">最受欢迎</div>
         </div>
-        <ul class="mainFilmContent">
-            <li>
-                <div class="movie_details">
-                    <span class="special"></span>
-                    <span class="blur">标清</span>
-                    <img src="img/51_270_360.jpg" alt="">
-                    <div class="movie_text">
-                        <div>
-                            <p>外乡人</p>
-                            <p>上海外来人的辛酸与甘甜</p>
-                        </div>
-                        <p class="ranking_point">
-                            <span>9.</span><span>1</span>
-                        </p>
-                    </div>
-                </div>
-            </li>
-            <li><img src="" alt=""></li>
-            <li><img src="" alt=""></li>
-            <li><img src="" alt=""></li>
-            <li><img src="" alt=""></li>
-        </ul>
+        <div id="mainFilms">
+                <ul class="mainFilmContent">
+                        
+                    </ul>
+        </div>
+        
     </div>
     <div id="help">
             <ul>

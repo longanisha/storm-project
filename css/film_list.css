@@ -50,10 +50,10 @@
   line-height: 39px;
   color: #fff;
   font-size: 14px;
-}
-#header .user_bar ul li:hover {
-  background-color: #0b68c8;
   cursor: pointer;
+}
+#header .user_bar ul li.active {
+  background-color: #0b68c8;
 }
 body {
   background-color: #f3f3f3;
@@ -71,13 +71,17 @@ body {
 #main .filmType li {
   text-align: center;
   height: 28px;
+  color: #333;
   line-height: 28px;
   padding: 8px 21px;
-  background-color: #0b68c8;
-  color: #fff;
   margin-right: 31px;
   margin: 20px 31px 30px 0;
   float: left;
+  cursor: pointer;
+}
+#main .filmType li.active {
+  background-color: #0b68c8;
+  color: #fff;
 }
 #main .ranking {
   width: 1075PX;
@@ -93,16 +97,24 @@ body {
   line-height: 40px;
   text-align: center;
   color: #0b68c8;
+  cursor: pointer;
+}
+#main .ranking div.active {
+  border-top: 1px solid blue;
+  background-color: #fff;
 }
 #main .mainFilmContent {
   width: 1075PX;
   margin: 0 auto;
   overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
 }
 #main .mainFilmContent li {
-  float: left;
+  margin-bottom: 20px;
   position: relative;
   width: 205px;
+  width: 20%;
 }
 #main .mainFilmContent li:nth-child(5) {
   margin: 0;
