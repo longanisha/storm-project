@@ -173,3 +173,15 @@
   margin-bottom: 10px;
 }
 /*# sourceMappingURL=login.css.map */
+
+.error {
+  display: flex;
+  color: red;
+  align-items:center; 
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.hide {
+  display: none;
+}

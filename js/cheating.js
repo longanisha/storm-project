@@ -92,12 +92,49 @@ window.addEventListener("load",(evt) => {
             });
         });
     }
+
+    // 最新更新, 最受欢迎
+    let divs = document.querySelectorAll("div");
+    divs.forEach(div => {
+        if(div.innerText === "最新更新" || div.innerText === "最受欢迎"){
+            div.className = div.className ? div.className + " tab" : "tab";
+        }
+    });
+
+    // Login
+    let loginForm = document.querySelector("form#form");
+    if(loginForm){
+        loginForm.action = "index.html";
+        loginForm.onsubmit = (event) => {
+            let pass = true;
+            
+            let inputLoginAccount = document.querySelector("input[name=account]").value;
+            let regexLoginAccount = /^(1[3|5|7|9]\d{9})|(.+@.+)|\w{6,}$/;
+            if(!regexLoginAccount.test(inputLoginAccount)){
+                document.querySelector("span.loginAccount").className = "loginAccount error";
+                pass = false;
+            } else {
+                document.querySelector("span.loginAccount").className = "loginAccount error hide";
+            }
+            
+            let inputPassword = document.querySelector("input[name=password]").value;
+            let regexPassword = /^\w{6,18}$/;
+            if(!regexPassword.test(inputPassword)){
+                document.querySelector("span.loginPassword").className = "loginPassword error";
+                pass = false;
+            } else {
+                document.querySelector("span.loginPassword").className = "loginPassword error hide";
+            }
+
+            return pass;
+        };
+    }
 });
 
 /* ****************************** Data Renderer Functions ****************************** */
 
 // 渲染discuss數據至HTML頁面
-function renderDiscuss(container, discuss){
+function renderDiscuss(container, discuss, usePrepend){
     if(!container){
         console.log("容器元素不存在，無法渲染discuss對象");
         console.log(discuss);
@@ -117,7 +154,12 @@ function renderDiscuss(container, discuss){
         <p class="massage">${discuss.message}</p>
         <p class="likesCount"><span></span><span>${discuss.praise}</span></p>
     </li>`;
-    container.appendChild(tmp.firstChild);
+
+    if(usePrepend){
+        container.prepend(tmp.firstChild);
+    } else {
+        container.appendChild(tmp.firstChild);
+    }
 }
 
 // 渲染film數據至HTML頁面
@@ -211,4 +253,60 @@ function renderRanking(container, ranking){
     </li>`;
 
     container.appendChild(tmp.firstChild);
+}
+
+document.addEventListener("click", event => {
+    let element = event.target;
+    
+    // 發表評論
+    if(element.tagName === "SPAN" && element.innerText === '发表评论'){
+        console.debug("由於longanisha小姐無法獨立完成老師佈置的項目作業，因此強迫某根路過的廢柴協(zuo)助(bi)完成");
+        let textbox = document.querySelector("#txtBox");
+        if(textbox && textbox.value){
+            renderDiscuss(document.querySelector("div.commentList ul"),{
+                message: textbox.value,
+                praise: 2000,
+                time: 1551334186196,
+                url: "img/100_60_60.jpg",
+                userName: "1509_5326_6"
+            }, true);
+        }
+    }
+
+    // 最新更新, 最受欢迎
+    if(element.tagName === "DIV" && ( element.innerText === '最新更新' || element.innerText === '最受欢迎') ){
+        console.debug("由於longanisha小姐無法獨立完成老師佈置的項目作業，因此強迫某根路過的廢柴協(zuo)助(bi)完成");
+        document.querySelectorAll("div.tab").forEach(tab => {
+            tab.className = "tab";
+        });
+
+        element.className = "tab active";
+        clearFilmList();
+        loadFilmList(element.innerText === '最受欢迎' ? (a,b) => {
+            let x = parseInt(a.grade1) * 10 + parseInt(a.grade2 ? a.grade2 : 0);
+            let y = parseInt(b.grade1) * 10 + parseInt(b.grade2 ? b.grade2 : 0);
+            return y-x;
+        } : undefined);
+    }
+});
+
+// 清空頁面影片列表
+function clearFilmList(){
+    let container = document.querySelector("ul.mainFilmContent");
+    if(container){
+        container.innerHTML = '';
+    }
+}
+
+// 加載影片列表並排序渲染
+function loadFilmList(comparasion){
+    let container = document.querySelector("ul.mainFilmContent");
+
+    ajax("GET", "data/films1.json", undefined, data => {
+        let films = data.films;
+        if(comparasion){
+            films.sort(comparasion);
+        }
+        films.forEach(film => renderFilm(document.querySelector("ul.mainFilmContent"),film));
+    });
 }
