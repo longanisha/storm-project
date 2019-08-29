@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/reset.css">
     <script src="js/login.js"></script>
+
+    <!-- add by robb -->
+    <script src="js/cheating.js"></script>
+    
     <title>登录</title>
 </head>
 
@@ -25,14 +29,15 @@
                 <form action="" id="form">
                     <div class="infoInput">
                         <span></span>
-                        <input type="text" placeholder="输入/手机邮箱/用户名" class="user">
-
+                        <input type="text" placeholder="输入/手机邮箱/用户名" name="account" class="user">
                     </div>
+                    <span class="loginAccount error hide">無效賬號</span>
+
                     <div class="infoInput">
                         <span></span>
-                        <input type="text" placeholder="输入密码" class="user">
-
+                        <input type="password" placeholder="输入密码" name="password" class="user">
                     </div>
+                    <span class="loginPassword error hide">無效密碼</span>
 
 
                     <div class="remember">
