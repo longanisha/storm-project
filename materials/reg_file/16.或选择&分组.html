@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .error{
+            display: none;
+            color: red;
+        }
+        .success{
+            color: green;
+        }
+    </style>
+</head>
+<body>   
+
+    <!-- 小写字母开头，数字，字母，下划线，总长度6-12 -->
+    <form id="oform" action="http://www.ujiuye.com">
+        <p><input type="text" name="userName"><span class="error">错误</span></p>
+        <input type="submit" value="提交">
+    </form>
+    <script>
+        var oF = document.querySelector("#oform");
+        var oSpan = oF.getElementsByTagName("span")[0];
+        oF.userName.onchange = function(){
+            oSpan.style.display = "inline";
+            var v = this.value;
+            var reg = /^[a-z]\w{5,11}$/;
+            if(reg.test(v)){
+                oSpan.className = "success";
+                oSpan.innerText = "正确";
+            }else{
+                oSpan.className = "error";
+                oSpan.innerText = "错误";
+            }
+        }
+
+        oF.onsubmit = function(){
+            oSpan.style.display = "inline";
+            var v = oF.userName.value;
+            var reg = /^[a-z]\w{5,11}$/;
+            if(reg.test(v)){
+                oSpan.className = "success";
+                oSpan.innerText = "正确";
+            }else{
+                oSpan.className = "error";
+                oSpan.innerText = "错误";
+            }
+
+            return reg.test(v);
+        }
+    </script>
+</body>
+</html>
