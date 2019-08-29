@@ -1,0 +1,62 @@
+@import "common";
+
+#top{
+    .top();
+}
+#main{
+    width: 1100px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #fff;
+    .nav{
+        .navigation();
+        // li:nth-child(2){
+        //     background-color: #0b68c8;
+        // }
+
+    }
+    .tabs{
+        li{
+            padding: 10px 20px;
+            float: left;
+            margin: 20px 0 30px 0;
+            &:hover{
+                background-color: #0b68c8;
+                color: #fff;
+            }
+        }
+    }
+    .sort{
+        height: 40px;
+        border: 1px solid #dedede;
+        background-color: #f8f8f8;
+        margin-bottom: 30px;
+        li{
+            float: left;
+            width: 128px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            font-size: 14px;
+            color: #0b68c8;
+            cursor: pointer;
+            &.select{
+                height: 37px;
+                color: #000;
+                border-top: 4px solid #0b68c8;
+                border-right: 1px solid #dedede;
+                background-color: #fff; 
+            }
+        }
+    }
+    .content{
+        .movies();
+    }
+}
+
+#server{
+    .server();
+}
+#bottom{
+    .bottom();
+}

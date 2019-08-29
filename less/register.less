@@ -52,88 +52,114 @@
                         margin: 6px 2px 0 0;
                     }
                 }
-                
-                .user, .pw, .sub{
-                    height: 30px;
-                    width: 100%;
-                    margin-bottom: 10px;
-                    &:nth-child(3){
-                        width: 50px;
+                form{
+                    .user, .pw, .sub{
+                        height: 34px;
+                        width: 100%;
+                        // 
+                        &:nth-child(3){
+                            width: 50px;
+                        }
                     }
-                }
-                .verify, .txtcode{
-                    // height: 40px;
-                    width: 286px;
-                    margin-bottom: 10px;
-                    display: flex;
-                    justify-content: space-between;
-                    height: 30px;
-
-                }
-
-                .remember{
-                    display: flex;
-                    justify-content: space-between;
-                    margin-bottom: 10px;
-                    >p{
+                    .infoInput{
+                        height: 34px;
+                        width: 284px;
+                        text-align: center;
+                        border: 1px solid #000;
                         display: flex;
-                        color: #999999;
-                        align-items:center; 
-                        a{
-                            color: #1a9eff;
+                        align-items: center;
+                        margin-bottom: 10px;
+                        span{
+                            display: inline-block;
+                           margin-right: 5px;
+                            width: 20px;
+                            height: 19px;
+                            background: url("../img/playicons.png") -281px 0 no-repeat;
                         }
-
-                        .tick{
-                            width: 14px;
-                            height: 14px;
-                            vertical-align: top;
-                            margin-right: 5px;
-                            
+                        .user{
+                            width: 260px;
+                            border: none;
                         }
                     }
-                    >span{
-                        a{
-                    color: #1a9eff;
-
+                    .verify, .txtcode{
+                        // height: 40px;
+                        width: 286px;
+                        margin-bottom: 10px;
+                        display: flex;
+                        justify-content: space-between;
+                        height: 30px;
+                        span{
+                            line-height: 30px;
                         }
-                    // color: #1a9eff;
-
                     }
-                }
-                .sub{
-                    height: 38px;
-                    background-color: #1a9eff;
-                    color: #fff;
-                    font-size: 15px;
-                    border: none;
-                    cursor: pointer;
-                }
-                
-            }
-            .help{
-                width: 100%;
-                p{
-                    float: left;
-                    color: #999999;
-                    display: flex;
-                    // justify-content: center;
-                    align-items: center;
-                    cursor: pointer;
-                    span:nth-child(1){
-                        display: inline-block;
-                        width: 14px;
-                        height: 14px;
-                        background: url("../img/question(1).png") 0 0 no-repeat;
-                        margin-right: 4px;
+    
+                    .remember{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 10px;
+                        >p{
+                            display: flex;
+                            color: #999999;
+                            align-items:center; 
+                            a{
+                                color: #1a9eff;
+                            }
+    
+                            .tick{
+                                width: 14px;
+                                height: 14px;
+                                vertical-align: top;
+                                margin-right: 5px;
+                                
+                            }
+                        }
+                        >span{
+                            a{
+                        color: #1a9eff;
+    
+                            }
+                        // color: #1a9eff;
+    
+                        }
+                    }
+                    .sub{
+                        height: 38px;
+                        background-color: #1a9eff;
+                        color: #fff;
+                        font-size: 15px;
+                        border: none;
+                        cursor: pointer;
+                        margin-bottom: 10px;
+
                     }
                     
                 }
-                a{
-                    float: right;
-                    color: #1a9eff;
-                    // color: #999999;
+                .help{
+                    width: 100%;
+                    p{
+                        float: left;
+                        color: #999999;
+                        display: flex;
+                        // justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                        span:nth-child(1){
+                            display: inline-block;
+                            width: 14px;
+                            height: 14px;
+                            background: url("../img/question(1).png") 0 0 no-repeat;
+                            margin-right: 4px;
+                        }
+                        
+                    }
+                    a{
+                        float: right;
+                        color: #1a9eff;
+                        // color: #999999;
+                    }
                 }
-            }
+                }
+                
             .loginBoxBottom{
                 position: absolute;
                 bottom: 0;

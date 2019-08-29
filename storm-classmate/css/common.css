@@ -1,0 +1,283 @@
+body {
+  background-color: #f3f3f3;
+}
+/* 清除浮动 */
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+.clearfix {
+  zoom: 1;
+}
+/* 水平垂直居中 */
+.center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+/* 水平居中 */
+.l_center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+/* 垂直居中 */
+.t_center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+/* 标题样式 */
+.title {
+  position: relative;
+  margin: 30px 0 16px 0;
+}
+.title h2 {
+  font-size: 24px;
+}
+.title a {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #000;
+}
+/* 电影列表 */
+.movies ul {
+  float: left;
+  margin-left: 1.70454545%;
+  margin-bottom: 20px;
+}
+.movies ul:nth-child(5n + 1) {
+  margin-left: 0;
+}
+.movies ul li:nth-child(1) {
+  position: relative;
+  width: 205px;
+  height: 287px;
+}
+.movies ul li:nth-child(1) img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.movies ul li:nth-child(1) span:nth-of-type(1) {
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  width: 75px;
+  height: 18px;
+  border-radius: 2px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 18px;
+}
+.movies ul li:nth-child(1) span:nth-of-type(1) i {
+  font-style: normal;
+  text-decoration: line-through;
+}
+.movies ul li:nth-child(1) span:nth-of-type(2) {
+  position: absolute;
+  width: 28px;
+  height: 18px;
+  right: 7px;
+  bottom: 7px;
+  color: #fff;
+  text-align: center;
+  line-height: 18px;
+}
+.movies ul li:nth-child(2) {
+  position: relative;
+  padding-top: 6px;
+}
+.movies ul li:nth-child(2) span {
+  display: block;
+}
+.movies ul li:nth-child(2) span:nth-child(1) {
+  color: #191919;
+  font-size: 14px;
+}
+.movies ul li:nth-child(2) span:nth-child(2) {
+  font-size: 12px;
+  color: #999999;
+}
+.movies ul li:nth-child(2) span:nth-child(3) {
+  display: table;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 0;
+  color: #ff6600;
+}
+.movies ul li:nth-child(2) span:nth-child(3) i {
+  font-style: normal;
+  font-size: 16px;
+}
+.top {
+  width: 100%;
+  height: 64px;
+  background: url("../img/vip-bgs.png") 0 0;
+  border-bottom: 1px solid #c7c4c5;
+}
+.top > div {
+  position: relative;
+  width: 1100px;
+  height: 64px;
+  margin: 0 auto;
+}
+.top > div .logo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 191px;
+  height: 29px;
+  left: 10px;
+  background: url("../img/vip-logo.png") no-repeat 0 -144px;
+}
+.top > div ul {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  display: table;
+}
+.top > div ul li {
+  float: left;
+  padding: 5px 10px;
+}
+.top > div ul li a {
+  color: #686868;
+}
+.navigation {
+  height: 40px;
+  background: url("../img/vip-bgs.png") 0 -74px;
+}
+.navigation li {
+  float: left;
+  width: 115px;
+  height: 38px;
+  margin-top: 2px;
+  text-align: center;
+  line-height: 38px;
+}
+.navigation li:hover {
+  background-color: #0b68c8;
+}
+.navigation li a {
+  color: #ffffff;
+}
+.server {
+  position: relative;
+  width: 1100px;
+  height: 195px;
+  margin: 0 auto;
+  margin-top: 100px;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+.server:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: -2px;
+  background-color: #dedede;
+}
+.server:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  background-color: #dedede;
+}
+.server dl {
+  position: relative;
+  float: left;
+  box-sizing: border-box;
+  margin: 55px 0 45px 0;
+  width: 25%;
+  border-right: 1px solid #dedede;
+  padding-top: 7px;
+}
+.server dl:last-child {
+  border-right: none;
+}
+.server dl:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 80px;
+  width: 51px;
+  height: 51px;
+  border-radius: 50%;
+}
+.server dl:nth-child(1):before {
+  background: url("../img/vip-powers.png") no-repeat 0 -111px;
+}
+.server dl:nth-child(2):before {
+  background: url("../img/vip-powers.png") no-repeat -51px -111px;
+}
+.server dl:nth-child(3):before {
+  background: url("../img/vip-powers.png") no-repeat -102px -111px;
+}
+.server dl:nth-child(4):before {
+  background: url("../img/vip-powers.png") no-repeat -153px -111px;
+}
+.server dl dt {
+  margin-left: 140px;
+  color: #333333;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+.server dl dd {
+  margin-left: 140px;
+  line-height: 18px;
+}
+.server dl dd a {
+  color: #000000;
+}
+.bottom {
+  width: 1100px;
+  height: 166px;
+  margin: 0 auto;
+  padding-top: 54px;
+}
+.bottom p {
+  text-align: center;
+  line-height: 24px;
+  color: #999999;
+}
+.h2 {
+  position: relative;
+  height: 30px;
+  padding-left: 10px;
+  margin: 30px 0 16px 0;
+  font-weight: normal;
+  font-size: 24px;
+}
+.h2:before {
+  content: '';
+  width: 4px;
+  height: 26px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  top: 2px;
+  left: 0;
+  background-color: #1a9eff;
+}
+/*# sourceMappingURL=common.css.map */

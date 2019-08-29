@@ -21,7 +21,7 @@ window.onload = function(){
         var parent = document.querySelector(ul);
         parent.appendChild(tmp.firstChild);
       }
-      ajax("GET", "data/films.json", undefined, data => {
+      ajax("GET", "data/films1.json", undefined, data => {
         // console.log(data);
         var films = data.films;
         films.forEach(film => {
@@ -30,6 +30,13 @@ window.onload = function(){
         films.forEach(film => {
             appendFilm("div#mainFilms ul", film);
           });
+          films.forEach(film => {
+            appendFilm("div#mainFilms ul", film);
+          });
+          films.forEach(film => {
+            appendFilm("div#mainFilms ul", film);
+          });
       });
+      
 
 }

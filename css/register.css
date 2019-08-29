@@ -53,74 +53,98 @@
   vertical-align: baseline;
   margin: 6px 2px 0 0;
 }
-#main .middle .loginBox .loginBoxTop .user,
-#main .middle .loginBox .loginBoxTop .pw,
-#main .middle .loginBox .loginBoxTop .sub {
-  height: 30px;
+#main .middle .loginBox .loginBoxTop form .user,
+#main .middle .loginBox .loginBoxTop form .pw,
+#main .middle .loginBox .loginBoxTop form .sub {
+  height: 34px;
   width: 100%;
-  margin-bottom: 10px;
 }
-#main .middle .loginBox .loginBoxTop .user:nth-child(3),
-#main .middle .loginBox .loginBoxTop .pw:nth-child(3),
-#main .middle .loginBox .loginBoxTop .sub:nth-child(3) {
+#main .middle .loginBox .loginBoxTop form .user:nth-child(3),
+#main .middle .loginBox .loginBoxTop form .pw:nth-child(3),
+#main .middle .loginBox .loginBoxTop form .sub:nth-child(3) {
   width: 50px;
 }
-#main .middle .loginBox .loginBoxTop .verify,
-#main .middle .loginBox .loginBoxTop .txtcode {
+#main .middle .loginBox .loginBoxTop form .infoInput {
+  height: 34px;
+  width: 284px;
+  text-align: center;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#main .middle .loginBox .loginBoxTop form .infoInput span {
+  display: inline-block;
+  margin-right: 5px;
+  width: 20px;
+  height: 19px;
+  background: url("../img/playicons.png") -281px 0 no-repeat;
+}
+#main .middle .loginBox .loginBoxTop form .infoInput .user {
+  width: 260px;
+  border: none;
+}
+#main .middle .loginBox .loginBoxTop form .verify,
+#main .middle .loginBox .loginBoxTop form .txtcode {
   width: 286px;
   margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
   height: 30px;
 }
-#main .middle .loginBox .loginBoxTop .remember {
+#main .middle .loginBox .loginBoxTop form .verify span,
+#main .middle .loginBox .loginBoxTop form .txtcode span {
+  line-height: 30px;
+}
+#main .middle .loginBox .loginBoxTop form .remember {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
 }
-#main .middle .loginBox .loginBoxTop .remember > p {
+#main .middle .loginBox .loginBoxTop form .remember > p {
   display: flex;
   color: #999999;
   align-items: center;
 }
-#main .middle .loginBox .loginBoxTop .remember > p a {
+#main .middle .loginBox .loginBoxTop form .remember > p a {
   color: #1a9eff;
 }
-#main .middle .loginBox .loginBoxTop .remember > p .tick {
+#main .middle .loginBox .loginBoxTop form .remember > p .tick {
   width: 14px;
   height: 14px;
   vertical-align: top;
   margin-right: 5px;
 }
-#main .middle .loginBox .loginBoxTop .remember > span a {
+#main .middle .loginBox .loginBoxTop form .remember > span a {
   color: #1a9eff;
 }
-#main .middle .loginBox .loginBoxTop .sub {
+#main .middle .loginBox .loginBoxTop form .sub {
   height: 38px;
   background-color: #1a9eff;
   color: #fff;
   font-size: 15px;
   border: none;
   cursor: pointer;
+  margin-bottom: 10px;
 }
-#main .middle .loginBox .help {
+#main .middle .loginBox .loginBoxTop .help {
   width: 100%;
 }
-#main .middle .loginBox .help p {
+#main .middle .loginBox .loginBoxTop .help p {
   float: left;
   color: #999999;
   display: flex;
   align-items: center;
   cursor: pointer;
 }
-#main .middle .loginBox .help p span:nth-child(1) {
+#main .middle .loginBox .loginBoxTop .help p span:nth-child(1) {
   display: inline-block;
   width: 14px;
   height: 14px;
   background: url("../img/question(1).png") 0 0 no-repeat;
   margin-right: 4px;
 }
-#main .middle .loginBox .help a {
+#main .middle .loginBox .loginBoxTop .help a {
   float: right;
   color: #1a9eff;
 }

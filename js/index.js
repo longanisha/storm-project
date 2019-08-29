@@ -49,9 +49,10 @@ window.onload = function() {
     var tmp = document.createElement("div");
     tmp.innerHTML = `<li>
             <div class="movie_details">
+            
                 <span class="special"></span>
                 <span class="blur">${film.txt}</span>
-                <img src="${film.url}" alt="">
+                <a href="${film.http}"><img src="${film.url}" alt=""></a>
                 <div class="movie_text">
                     <div>
                         <p>${film.title}</p>
@@ -70,8 +71,8 @@ window.onload = function() {
   ajax("GET", "data/films.json", undefined, data => {
     // console.log(data);
     var films = data.films;
-    appendFilm("div#hot_film ul", films[0]);
-    appendFilm("div#hot_film ul", films[1]);
+    // appendFilm("div#hot_film ul", films[0]);
+    // appendFilm("div#hot_film ul", films[1]);
 
     films.forEach(film => {
       // console.log(film.grade);
